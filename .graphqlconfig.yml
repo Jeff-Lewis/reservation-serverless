@@ -1,0 +1,9 @@
+projects:
+  app:
+    schemaPath: src/graphql/api.graphql
+    extensions:
+      endpoints:
+        default: http://localhost:3000/graphql
+      prepare-binding:
+        output: src/utils/api.ts
+        generator: binding-ts

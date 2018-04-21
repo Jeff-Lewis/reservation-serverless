@@ -1,0 +1,27 @@
+type Reservation {
+  arrivalDate: Int! # Timestamp
+  departureDate: Int! # Timestamp
+  hotelName: String!
+  id: String!
+  name: String!
+}
+
+input ReservationCreate {
+  arrivalDate: Int! # Timestamp
+  departureDate: Int! # Timestamp
+  hotelName: String!
+  name: String!
+}
+
+input ReservationWhere {
+  id: String! # Hash key
+}
+
+type Query {
+  reservations: [Reservation!]!
+  reservation (where: ReservationWhere!): Reservation
+}
+
+type Mutation {
+  createReservation (data: ReservationCreate!): Reservation
+}

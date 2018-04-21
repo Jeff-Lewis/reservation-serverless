@@ -1,0 +1,12 @@
+{
+  "extends": ["tslint-config-standard"],
+  "linterOptions": {
+    "exclude": [
+      "./src/utils/api.ts",
+      "./src/utils/prisma.ts"
+    ]
+  },
+  "rules": {
+    "no-trailing-whitespace": [false]
+  }
+}
