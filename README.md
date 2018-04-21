@@ -46,4 +46,4 @@ POST - https://ja8ibi4phg.execute-api.us-west-2.amazonaws.com/api/reservations
 
 I've included a Postman collection for those who utilize it:
 
-`./rservations.postman_collection.json`
+`./reservations.postman_collection.json`
