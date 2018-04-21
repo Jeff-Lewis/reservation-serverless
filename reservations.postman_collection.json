@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "29041ed6-81de-466c-8191-d9355404c2ab",
+		"name": "Hilton Reservations",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Reservations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/reservations",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"reservations"
+					]
+				},
+				"description": "Get all reservations"
+			},
+			"response": []
+		},
+		{
+			"name": "Reservation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/reservations/5d8554b9-e139-4154-b3b7-43e507957e74",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"reservations",
+						"5d8554b9-e139-4154-b3b7-43e507957e74"
+					]
+				},
+				"description": "Gets a single reservation by range (partition) key and id (hash key)"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Reservation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"arrivalDate\": 1524336673,\n  \"departureDate\": 1524423225,\n  \"name\": \"Testing\",\n  \"hotelName\": \"Hilton DoubleTree\"\n}\n"
+				},
+				"url": {
+					"raw": "{{url}}/reservations",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"reservations"
+					]
+				},
+				"description": "Creates a reservation"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "fbc950dd-73d8-43db-96b8-afabc9c3f2b4",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "00be532b-64ad-4550-9c9a-4e774e6988c8",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "274fb969-2f26-429d-93a1-3a1f7bd94c27",
+			"key": "url",
+			"value": "https://ja8ibi4phg.execute-api.us-west-2.amazonaws.com/api",
+			"type": "string",
+			"description": ""
+		}
+	]
+}
