@@ -2,7 +2,12 @@
 
 ### What is this?
 
-An example of a serverless RESTful and GraphQL api.
+An example of a serverless RESTful and GraphQL api. For a sample UI consuming these services checkout: 
+[Sample UI](https://github.com/abeagley/reservation-ui).
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=Vc3hcwFscME
+" target="_blank"><img src="http://img.youtube.com/vi/Vc3hcwFscME/0.jpg" 
+alt="Intro Video" width="240" height="180" border="10" /></a>
 
 ---
 
