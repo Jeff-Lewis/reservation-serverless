@@ -10,11 +10,11 @@ provider:
   runtime: nodejs6.10
   stage: api
   region: us-west-2
-  apiGateway:
-    restApiId: ja8ibi4phg
-    restApiRootResourceId: t5ufn3pwec
-  deploymentBucket:
-    name: hilton-reservations
+  #  apiGateway:
+  #    restApiId: ja8ibi4phg
+  #    restApiRootResourceId: t5ufn3pwec
+  #  deploymentBucket:
+  #    name: hilton-reservations
   iamRoleStatements:
     - Effect: Allow
       Action:

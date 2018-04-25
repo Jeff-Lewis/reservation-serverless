@@ -8,3 +8,4 @@ node_modules
 .nyc_output
 .serverless
 .build
+.build-ts

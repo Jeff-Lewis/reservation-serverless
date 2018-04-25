@@ -25,6 +25,7 @@
     ".serverless",
     "node_modules",
     "src/graph/api.graphql",
+    "test/**/*.ts",
     "coverage"
   ]
 }

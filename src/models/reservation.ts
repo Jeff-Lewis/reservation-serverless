@@ -17,13 +17,13 @@ export const ReservationSchema = new db.Schema({
   arrivalDate: {
     type: Number,
     validate: (value) => {
-      return (moment.unix(value).isSameOrAfter(moment().unix(), 'day'))
+      return moment.unix(value).isSameOrAfter(moment().unix(), 'day')
     }
   },
   departureDate: {
     type: Number,
     validate: (value) => {
-      return (moment.unix(value).isAfter(moment().unix(), 'day'))
+      return moment.unix(value).isAfter(moment().unix(), 'day')
     }
   }
 })

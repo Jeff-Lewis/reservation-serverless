@@ -2,7 +2,7 @@
   "name": "instance",
   "scripts": {
     "analyse": "npm run lint && npm run test",
-    "clean": "rimraf .build .serverless .nyc_output coverage",
+    "clean": "rimraf .build .serverless .nyc_output coverage .build-ts",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "prebuild": "graphql prepare && npm run clean && npm run analyse",
     "prepare": "graphql prepare",
@@ -13,7 +13,7 @@
     "lint": "tslint --project . --format verbose",
     "start": "graphql prepare && serverless offline start",
     "pretest": "npm run clean",
-    "test": "nyc mocha",
+    "test": "nyc ava-ts",
     "test:integration": "mocha --opts ./test/integration/mocha.opts"
   },
   "dependencies": {
@@ -39,7 +39,10 @@
     "@types/node": "^8.x",
     "@types/request": "^2.47.0",
     "@types/request-promise-native": "^1.0.14",
+    "@types/sinon": "^4.3.1",
     "@types/uuid": "^3.4.3",
+    "ava": "1.0.0-beta.4",
+    "ava-ts": "^0.24.3",
     "aws-sdk": "^2.226.1",
     "chai": "^4.1.2",
     "chance": "^1.0.13",
@@ -52,6 +55,7 @@
     "serverless-offline": "^3.20.3",
     "serverless-plugin-typescript": "^1.1.5",
     "serverless-stack-output": "^0.2.3",
+    "sinon": "^4.5.0",
     "source-map-support": "^0.5.4",
     "ts-loader": "^3.x",
     "ts-mockito": "^2.3.0",
@@ -59,5 +63,14 @@
     "tslint": "^5.9.1",
     "tslint-config-standard": "^7.0.0",
     "typescript": "^2.8.3"
+  },
+  "ava": {
+    "files": [
+      "test/**/*.ts"
+    ],
+    "sources": [
+      "src/**/*.ts",
+      "src/**/*.graphql"
+    ]
   }
 }

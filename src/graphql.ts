@@ -4,7 +4,7 @@ import { GraphQLServerLambda } from 'graphql-yoga'
 
 import reservationResolver from './resolvers/reservation'
 
-const typeDefs = importSchema('./src/graphql/api.graphql')
+const typeDefs = importSchema('./src/api.graphql')
 
 export const endpoint: Handler = async (evt: APIGatewayEvent, ctx: Context, cb: Callback) => {
   try {
